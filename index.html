@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script src="js/svg4everybody.legacy.min.js"></script>
+    <script>svg4everybody();</script>
+
+	<title>SVG Basics</title>
+	<link rel="stylesheet" href="css/base.css">
+	<style>
+	svg {
+		background: #000;
+	}
+	.basic-shape {
+		width: 100px;
+	}
+	.hide {
+		display: none;
+	}
+	
+	.icon {
+		width: 32px;
+		height: 32px;
+		background: #ccc;
+		border-radius: 4px;
+		fill: #fff;
+		padding: 3px;
+	}
+	.icon img { width: 32px; height: 32px; padding: 0; margin: 0; }
+	</style>
+</head>
+<body>
+	<div class="row">
+		<div class="grid-12">
+			<h1>SVG Basics</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="grid-12">
+			<h2>基本的な図形</h2>
+			<svg class="basic-shape" viewBox="0 0 170 170">
+				<circle cx="85" cy="85" r="80" stroke-width="10" stroke="green" fill="yellow" />
+			</svg>
+		</div>
+	</div>
+	<div class="row">
+		<div class="grid-12">
+			<h2>SVGの内容をHTMLにInlineで埋め込んでSymbolを使って描画</h2>
+			<svg class="icon">
+				<use xlink:href="#arrow-left" />
+			</svg>
+			<svg class="icon">
+				<use xlink:href="#arrow-right" />
+			</svg>
+			<svg class="icon">
+				<use xlink:href="#arrow-up" />
+			</svg>
+			<svg class="icon">
+				<use xlink:href="#rriver" />
+			</svg>
+			<svg class="icon">
+				<use xlink:href="#gplus" />
+			</svg>
+			<svg class="icon">
+				<use xlink:href="#pocket" />
+			</svg>
+		</div>
+	</div>
+	<div class="row">
+		<div class="grid-12">
+			<h2>SVGを外部ファイルから読み込んでSymbolを使って描画</h2>
+			<svg role="image" class="icon">
+				<use xlink:href="svg/icons.svg#arrow-left" />
+			</svg>
+			<svg class="icon">
+				<use xlink:href="svg/icons.svg#arrow-right" />
+			</svg>
+			<svg class="icon">
+				<use xlink:href="svg/icons.svg#arrow-up" />
+			</svg>
+			<svg class="icon">
+				<use xlink:href="svg/icons.svg#rriver" />
+			</svg>
+			<svg class="icon">
+				<use xlink:href="svg/icons.svg#gplus" />
+			</svg>
+			<svg class="icon">
+				<use xlink:href="svg/icons.svg#pocket" />
+			</svg>
+		</div>
+	</div>
+
+</body>
+</html>
