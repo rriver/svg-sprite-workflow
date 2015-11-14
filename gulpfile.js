@@ -14,6 +14,7 @@ var $ = require('gulp-load-plugins')();
 // Create SVG sprite
 gulp.task('svg', function () {
   gulp.src('svg/icons/*.svg')
+    .pipe($.svgmin())
     .pipe($.svgstore({ inlineSvg: true }))
     .pipe($.cheerio({
       run: function ($, file) {
